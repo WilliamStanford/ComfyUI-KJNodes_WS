@@ -127,7 +127,7 @@ class CreateFluidMask:
         return {
             "required": {
                  "invert": ("BOOLEAN", {"default": False}),
-                 "frames": ("INT", {"default": 0,"min": 0, "max": 255, "step": 1}),
+                 "frames": ("INT", {"default": 0,"min": 0, "max": 4096, "step": 1}),
                  "width": ("INT", {"default": 256,"min": 16, "max": 4096, "step": 1}),
                  "height": ("INT", {"default": 256,"min": 16, "max": 4096, "step": 1}),
                  "inflow_count": ("INT", {"default": 3,"min": 0, "max": 255, "step": 1}),
