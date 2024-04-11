@@ -285,7 +285,7 @@ class CreateGradientMask:
             return (1.0 - torch.cat(out, dim=0),)
         return (torch.cat(out, dim=0),)
 
-class CreateFadeMask:
+class CreateFadeMaskWS:
     
     RETURN_TYPES = ("MASK",)
     FUNCTION = "createfademaskws"
@@ -356,7 +356,7 @@ class CreateFadeMask:
             return (1.0 - torch.cat(out, dim=0),)
         return (torch.cat(out, dim=0),)
 
-class CreateFadeMaskAdvanced:
+class CreateFadeMaskAdvancedWS:
     
     RETURN_TYPES = ("MASK",)
     FUNCTION = "createfademaskws"
@@ -4399,8 +4399,8 @@ NODE_CLASS_MAPPINGS = {
     "CreateGradientMask": CreateGradientMask,
     "CreateTextMask": CreateTextMask,
     "CreateAudioMask": CreateAudioMask,
-    "CreateFadeMask": CreateFadeMask,
-    "CreateFadeMaskAdvanced": CreateFadeMaskAdvanced,
+    "CreateFadeMaskWS": CreateFadeMaskWS,
+    "CreateFadeMaskAdvancedWS": CreateFadeMaskAdvancedWS,
     "CreateFluidMask" :CreateFluidMask,
     "VRAM_Debug" : VRAM_Debug,
     "SomethingToString" : SomethingToString,
@@ -4475,8 +4475,8 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "ColorToMask": "ColorToMask",
     "CreateGradientMask": "CreateGradientMask",
     "CreateTextMask" : "CreateTextMask",
-    "CreateFadeMask" : "CreateFadeMask (Deprecated)",
-    "CreateFadeMaskAdvanced" : "CreateFadeMaskAdvanced",
+    "CreateFadeMaskWS" : "CreateFadeMaskWS (Deprecated)",
+    "CreateFadeMaskAdvancedWS" : "CreateFadeMaskAdvancedWS",
     "CreateFluidMask" : "CreateFluidMask",
     "CreateAudioMask" : "CreateAudioMask (Deprecated)",
     "VRAM_Debug" : "VRAM Debug",
