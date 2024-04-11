@@ -296,7 +296,7 @@ class CreateFadeMask:
         return {
             "required": {
                  "invert": ("BOOLEAN", {"default": False}),
-                 "frames": ("INT", {"default": 2,"min": 2, "max": 255, "step": 1}),
+                 "frames": ("INT", {"default": 2,"min": 2, "max": 4096, "step": 1}),
                  "width": ("INT", {"default": 256,"min": 16, "max": 4096, "step": 1}),
                  "height": ("INT", {"default": 256,"min": 16, "max": 4096, "step": 1}),
                  "interpolation": (["linear", "ease_in", "ease_out", "ease_in_out"],),
