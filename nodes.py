@@ -288,7 +288,7 @@ class CreateGradientMask:
 class CreateFadeMask:
     
     RETURN_TYPES = ("MASK",)
-    FUNCTION = "createfademask"
+    FUNCTION = "createfademask-ws"
     CATEGORY = "KJNodes/deprecated"
 
     @classmethod
@@ -359,7 +359,7 @@ class CreateFadeMask:
 class CreateFadeMaskAdvanced:
     
     RETURN_TYPES = ("MASK",)
-    FUNCTION = "createfademask"
+    FUNCTION = "createfademask-ws"
     CATEGORY = "KJNodes/masking/generate"
     DESCRIPTION = """
 Create a batch of masks interpolated between given frames and values. 
@@ -383,7 +383,7 @@ and interpolating from that to fully black at the 16th frame.
             "required": {
                  "points_string": ("STRING", {"default": "0:(0.0),\n7:(1.0),\n15:(0.0)\n", "multiline": True}),
                  "invert": ("BOOLEAN", {"default": False}),
-                 "frames": ("INT", {"default": 16,"min": 2, "max": 255, "step": 1}),
+                 "frames": ("INT", {"default": 16,"min": 2, "max": 4096, "step": 1}),
                  "width": ("INT", {"default": 512,"min": 16, "max": 4096, "step": 1}),
                  "height": ("INT", {"default": 512,"min": 16, "max": 4096, "step": 1}),
                  "interpolation": (["linear", "ease_in", "ease_out", "ease_in_out"],),
@@ -754,7 +754,7 @@ creates animation between them.
         return {
             "required": {
                  "invert": ("BOOLEAN", {"default": False}),
-                 "frames": ("INT", {"default": 1,"min": 1, "max": 4096, "step": 1}),
+                 "frames": ("INT", {"default": 1,"min": 1, "max": 255, "step": 1}),
                  "text_x": ("INT", {"default": 0,"min": 0, "max": 4096, "step": 1}),
                  "text_y": ("INT", {"default": 0,"min": 0, "max": 4096, "step": 1}),
                  "font_size": ("INT", {"default": 32,"min": 8, "max": 4096, "step": 1}),
