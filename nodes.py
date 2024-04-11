@@ -288,7 +288,7 @@ class CreateGradientMask:
 class CreateFadeMaskWS:
     
     RETURN_TYPES = ("MASK",)
-    FUNCTION = "createfademaskws"
+    FUNCTION = "createfademask"
     CATEGORY = "KJNodes/deprecated"
 
     @classmethod
@@ -359,7 +359,7 @@ class CreateFadeMaskWS:
 class CreateFadeMaskAdvancedWS:
     
     RETURN_TYPES = ("MASK",)
-    FUNCTION = "createfademaskws"
+    FUNCTION = "createfademask"
     CATEGORY = "KJNodes/masking/generate"
     DESCRIPTION = """
 Create a batch of masks interpolated between given frames and values. 
