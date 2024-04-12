@@ -404,11 +404,11 @@ and interpolating from that to fully black at the 16th frame.
         points = []
         points_string = points_string.rstrip(',\n')
         for point_str in points_string.split(','):
-	    print(point_str)
-            frame_str, color_str = point_str.split(':')
-            frame = int(frame_str.strip())
-            color = float(color_str.strip()[1:-1])  # Remove parentheses around color
-            points.append((frame, color))
+		print(point_str)
+		frame_str, color_str = point_str.split(':')
+		frame = int(frame_str.strip())
+		color = float(color_str.strip()[1:-1])  # Remove parentheses around color
+		points.append((frame, color))
 
         # Check if the last frame is already in the points
         if len(points) == 0 or points[-1][0] != frames - 1:
